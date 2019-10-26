@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    bootstrap-servers: 172.18.0.12:9092
+    producer:
+      properties:
+        enable.idempotence: true
+    consumer:
+      enable-auto-commit: false
+    listener:
+      missing-topics-fatal: false
+      type: batch
+      ack-mode: manual
